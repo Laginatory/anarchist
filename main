@@ -1,0 +1,180 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local anarchistHeader = Instance.new("TextLabel")
+local UIPadding = Instance.new("UIPadding")
+local UIGradient = Instance.new("UIGradient")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Speed = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UIPadding_2 = Instance.new("UIPadding")
+local TextButton = Instance.new("TextButton")
+local Jump = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextBox_2 = Instance.new("TextBox")
+local UIPadding_3 = Instance.new("UIPadding")
+local TextButton_2 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.Active = true
+Frame.BackgroundColor3 = Color3.fromRGB(186, 65, 67)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0323599055, 0, 0.573257446, 0)
+Frame.Size = UDim2.new(0, 452, 0, 257)
+Frame.Draggable = true
+
+anarchistHeader.Name = "anarchistHeader"
+anarchistHeader.Parent = Frame
+anarchistHeader.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+anarchistHeader.BackgroundTransparency = 0.450
+anarchistHeader.BorderSizePixel = 0
+anarchistHeader.Size = UDim2.new(0, 452, 0, 55)
+anarchistHeader.Font = Enum.Font.Fondamento
+anarchistHeader.Text = "anarchist"
+anarchistHeader.TextColor3 = Color3.fromRGB(255, 115, 115)
+anarchistHeader.TextScaled = true
+anarchistHeader.TextSize = 14.000
+anarchistHeader.TextWrapped = true
+anarchistHeader.TextXAlignment = Enum.TextXAlignment.Left
+
+UIPadding.Parent = anarchistHeader
+UIPadding.PaddingLeft = UDim.new(0.0500000007, 0)
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 226, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(172, 0, 2))}
+UIGradient.Parent = Frame
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+ScrollingFrame.BackgroundTransparency = 0.450
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0199115053, 0, 0.256809324, 0)
+ScrollingFrame.Size = UDim2.new(0, 434, 0, 153)
+
+Speed.Name = "Speed"
+Speed.Parent = ScrollingFrame
+Speed.BackgroundColor3 = Color3.fromRGB(193, 86, 86)
+Speed.BorderSizePixel = 0
+Speed.Position = UDim2.new(0.0230414756, 0, 0.0326088779, 0)
+Speed.Size = UDim2.new(0, 402, 0, 51)
+
+TextLabel.Parent = Speed
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0373134315, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 213, 0, 51)
+TextLabel.Font = Enum.Font.Fondamento
+TextLabel.Text = "Walkspeed"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+TextBox.Parent = Speed
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BackgroundTransparency = 0.500
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.567164183, 0, 0.137254909, 0)
+TextBox.Size = UDim2.new(0, 107, 0, 37)
+TextBox.Font = Enum.Font.Fondamento
+TextBox.PlaceholderText = "Int Value Here"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextStrokeColor3 = Color3.fromRGB(167, 167, 167)
+TextBox.TextWrapped = true
+
+UIPadding_2.Parent = TextBox
+UIPadding_2.PaddingLeft = UDim.new(0.00999999978, 0)
+UIPadding_2.PaddingRight = UDim.new(0.00999999978, 0)
+
+TextButton.Parent = Speed
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BackgroundTransparency = 0.500
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.865671635, 0, 0.137255505, 0)
+TextButton.Size = UDim2.new(0, 39, 0, 37)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "💉"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Click:Connect(function()
+  local plr = game.Players.LocalPlayer
+  local value = TextBox.Text
+  if plr.Character then do
+      plr.Character.Humanoid.WalkSpeed = value
+    end
+  end
+end)
+
+Jump.Name = "Jump"
+Jump.Parent = ScrollingFrame
+Jump.BackgroundColor3 = Color3.fromRGB(193, 86, 86)
+Jump.BorderSizePixel = 0
+Jump.Position = UDim2.new(0.0230414756, 0, 0.149340391, 0)
+Jump.Size = UDim2.new(0, 402, 0, 51)
+
+TextLabel_2.Parent = Jump
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0373134315, 0, 0, 0)
+TextLabel_2.Size = UDim2.new(0, 213, 0, 51)
+TextLabel_2.Font = Enum.Font.Fondamento
+TextLabel_2.Text = "Jump height"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+TextBox_2.Parent = Jump
+TextBox_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.BackgroundTransparency = 0.500
+TextBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox_2.BorderSizePixel = 0
+TextBox_2.Position = UDim2.new(0.567164183, 0, 0.137254909, 0)
+TextBox_2.Size = UDim2.new(0, 107, 0, 37)
+TextBox_2.Font = Enum.Font.Fondamento
+TextBox_2.PlaceholderText = "Int Value Here"
+TextBox_2.Text = ""
+TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox_2.TextScaled = true
+TextBox_2.TextSize = 14.000
+TextBox_2.TextStrokeColor3 = Color3.fromRGB(167, 167, 167)
+TextBox_2.TextWrapped = true
+
+UIPadding_3.Parent = TextBox_2
+UIPadding_3.PaddingLeft = UDim.new(0.00999999978, 0)
+UIPadding_3.PaddingRight = UDim.new(0.00999999978, 0)
+
+TextButton_2.Parent = Jump
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BackgroundTransparency = 0.500
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.865671635, 0, 0.137255505, 0)
+TextButton_2.Size = UDim2.new(0, 39, 0, 37)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "💉"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+TextButton_2.MouseButton1Click:Connect(function()
+  local plr = game.Players.LocalPlayer
+  local value = TextBox_2.Text
+  if plr.Character then do
+      plr.Character.Humanoid.UseJumpPower = false
+      plr.Character.Humanoid.JumpHeight = value
+    end
+  end
+end)
